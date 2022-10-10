@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+/**********************
+ Header 
+ *********************/
+header {
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  padding: 7px 12px;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  margin: 0 1rem;
+  height: 100%;
+}
+
+.logo-title {
+  font-size: 1.3rem;
+}
+
+.logo-title-span {
+  font-size: 0.5rem;
+  position: relative;
+  margin-left: -0.2rem;
+}
+
+.icon-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.header-favorite-icon {
+  margin-left: auto;
+}
+
+.icon-wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.icon-wrapper a i {
+  padding: 0 1rem;
+  font-size: 27px;
+}
+
+.category-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+  align-items: center;
+  font-size: 1.2rem;
+
+  display: none;
+}
+
+/**********************
+ Product Section
+ *********************/
+.section-product {
+  width: 80%;
+  margin: 90px auto;
+}
+
+.product-title {
+  font-size: 2.6rem;
+  margin: 1.3rem 0;
+}
+
+.product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-filter>select {
+  margin: 5px 10px;
+  padding-left: 1%;
+  height: 40px;
+  width: 40%;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.product-wrapper {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.product-item {
+  position: relative;
+  width: 100%;
+}
+
+.product-img-wrapper {
+  position: relative;
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14362/t-shirt.png");
+  background-size: cover;
+  z-index:5;
+  aspect-ratio: 1/1;
+}
+
+.product-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  visibility: hidden;
+}
+
+.product-img-wrapper:hover .product-item-img{
+  visibility: visible;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background-color: #fff;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.product-item-title {
+  margin-top: 0.2rem;
+  font-weight: 400;
+}
+
+.sold-out {
+  text-decoration-line: line-through;
+  font-weight: 300;
+}
+
+.sold-out::before {
+  margin-right: 0.5rem;
+  content: "Sold Out";
+  display: inline-block;
+}
+
+.paginator {
+  margin: 100px 0 20px 0;
+  font-weight: 400;
+}
+
+.page {
+  margin: 0 3px;
+}
+
+/**********************
+Regist section
+ *********************/
+.section-registion {
+  margin: 100px auto 0;
+  width: 100%;
+
+  background-image: url("https://assets-lighthouse.alphacamp.co/uploads/image/file/14376/template.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.registion-description {
+  padding: 25px 0 30px 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+}
+
+.registion-input-wrapper {
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#registion-input-email,
+.registion-label-email {
+  padding: 0 20px;
+  height: 50px;
+  border: 0px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#registion-input-email {
+  flex-grow: 1;
+  max-width: 60%;
+  background-color: #fff;
+  border-radius: 50px 0 0 50px;
+}
+
+.registion-label-email {
+  background-color: black;
+  border-radius: 0 50px 50px 0;
+  color: white;
+  line-height: 50px;
+}
+
+.registion-label-email:hover {
+  opacity: 0.9;
+}
+
+.registion-agreement {
+  padding-bottom: 50px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.registion-agreement>a {
+  text-decoration-line: underline;
+  font-size: 0.9rem;
+}
+
+/**********************
+Footer
+ *********************/
+footer {
+  height: 30px;
+  background-color: #f0f0f0;
+}
+
+.footer-description {
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 30px;
+}
+
+/**********************
+Media Query
+ *********************/
+@media screen and (min-width: 600px) {
+
+/**********************
+ Product Section
+ *********************/
+  .product-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .product-filter {
+    flex-wrap: nowrap;
+  }
+
+  .product-selection>select {
+    width: 25%;
+  }
+
+  .product-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+/**********************
+Regist section
+ *********************/
+  #registion-input-email {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+
+/**********************
+Header
+ *********************/
+  header {
+    height: 62px;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    position: static;
+  }
+
+  .logo-title {
+    font-size: 1.6rem;
+  }
+
+  .icon-wrapper {
+    width: unset;
+  }
+
+  .header-favorite-icon {
+    margin-left: unset;
+  }
+
+  .category-wrapper {
+    display: grid;
+  }
+
+/**********************
+ Product Section
+ *********************/
+  .product-selection>select {
+    width: 15%;
+  }
+
+  .product-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+/**********************
+Regist section
+ *********************/
+  .section-registion {
+    width: 82%;
+  }
+
+  #registion-input-email {
+    max-width: 40%;
+  }
+}
